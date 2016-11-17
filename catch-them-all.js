@@ -18,11 +18,11 @@ function catchPokemon(pokemonNumber) {
         var chunks = [];
         res.on('data', function(chunk){
             chunks.push(chunk);
-        }),
+        });
 
         res.on('end', function(){
             var buffer = Buffer.concat(chunks);
-            fs.writeFile('pokemons/' + pokemonNumber + '.png', buffer, function(err){
+            fs.writeFile('public/pokemons/' + pokemonNumber + '.png', buffer, function(err) {
                 if (err) {
                     console.log("Missed Pokemon #" + pokemonNumber);
                 }

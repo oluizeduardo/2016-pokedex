@@ -51,4 +51,4 @@ jspm_packages
 .yarn-integrity
 
 # Pokemons images
-pokemons/*.png
+public/pokemons/*.png
